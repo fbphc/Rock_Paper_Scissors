@@ -108,8 +108,8 @@ h2:nth-of-type(2) {
 
 .result{
   margin-top: -60px;
-  color: #ffac26;
-  font-size: 24px;
+  /* color: #ffac26; */
+  font-size: 20px;
 }
 
 .imgGame {
@@ -160,21 +160,18 @@ h2:nth-of-type(2) {
   transform: scale(1.1);
 }
 .scoreboard {
-  /* width: 200px;
-  margin: 0px auto; */
-  border: 3px solid white;
-  display: flex;
+  margin: 0px auto;
+  display: inline;
   justify-content: space-around;
   font-size: 20px;
   background: cornflowerblue;
- /*  border: 3px solid black; */
-  border-radius: 10px;
-  padding: 10px;
+  padding: 5px;
   font-size: 30px;
   color: #ffac26;
 }
-.scoreboard h2 {
-  margin: 0px;
-  padding: 0px;
-  font-size: 0.8em;
+
+.scoreboard div {
+  display: inline-block;
+  width: 146px;
+  padding-bottom: 20px;
 }

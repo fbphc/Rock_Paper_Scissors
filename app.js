@@ -1,23 +1,21 @@
-/* TO FILL EMPTY VALIDATION INPUT - MISSING 2ENTER" */
-
 function getInputValue() {
   let namePlayer = document.getElementById("input").value;
   let field = input.value;
+  const form = document.getElementById("form");
 
   if (field.length < 1) {
     document.getElementById("name").innerHTML = "???";
   } else {
     document.getElementById("name").innerHTML = namePlayer;
   }
+  document.getElementById("form").reset();
 }
 
-input.addEventListener("keyup", function (event) {
-  if (event.key === "Enter") {
-    document.getElementById("myBtn").click();
-  }
+form.addEventListener("submit", function (event) {
+  event.preventDefault();
+  getInputValue();
+  document.getElementById("form").reset();
 });
-
-/* ------------------------*/
 
 const computerChoiceDisplay = document.getElementById("computer-choice");
 const userChoiceDisplay = document.getElementById("user-choice");
@@ -135,39 +133,30 @@ function getResult() {
   scoreUser();
 }
 
-
-
-// ---------- not working ---------//
-
 let incrementUserScore = 0;
 let incrementComputerScore = 0;
 
-function scoreUser(){
-  if(result === "you win!"){
-   incrementUserScore++;
-   
-  } else if(result === "you lose!") {
+function scoreUser() {
+  if (result === "you win!") {
+    incrementUserScore++;
+  } else if (result === "you lose!") {
     incrementComputerScore++;
-    
-  }else{
-    console.log("suka")
+  } else {
+    console.log("suka");
   }
   setTimeout(() => {
-  document.getElementById("userScore").innerHTML = incrementUserScore;
-  document.getElementById("computerScore").innerHTML = incrementComputerScore;
-  console.log("incrementUserScore",  incrementUserScore, incrementComputerScore);
-}, 750);
+    document.getElementById("userScore").innerHTML = incrementUserScore;
+    document.getElementById("computerScore").innerHTML = incrementComputerScore;
+    console.log(
+      "incrementUserScore",
+      incrementUserScore,
+      incrementComputerScore
+    );
+  }, 750);
 }
 
-  
+// DISABLE BUTTONS //
 
-
-// --------------------- //
-
-
-
-
-// DISABLE BUTTONS - NEED TO BE DRY//
 function submitPoll1() {
   document.getElementById("Rock").disabled = true;
   setTimeout(function () {
@@ -191,18 +180,3 @@ function submitPoll3() {
   }, 1000);
 }
 document.getElementById("Scissors").addEventListener("click", submitPoll3);
-
-// WRONG INTERVAL //
-/* let seconds = 3;
-const go = "GO!";
-function startCountdown() {
-  let x = setInterval(function () {
-    document.getElementById("vs").innerHTML = seconds;
-    if (seconds > 0) {
-      seconds--;
-    } else {
-       document.getElementById("vs").innerHTML = "GO!";
-      clearInterval(x);
-    }
-  }, 300);
-} */
