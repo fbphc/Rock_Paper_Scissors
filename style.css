@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
+
 
 :root {
   --bg-color: #6495ed;
@@ -6,56 +6,27 @@
   --color-dark: #333;
   --color-white: #fff;
   --color-alert: rgb(255, 81, 0);
-  --clr-button: #fffbbe;
+  /* --clr-button: #fffbbe; */
   --clr-button-hover: rgb(43, 70, 121);
   --clr-underline: rgb(255, 172, 38);
   --bg-color-main: rgba(255, 121, 121, 0.3);
 
 }
-* {
-  box-sizing: border-box;
-}
-body {
-  font-family: "Luckiest Guy", cursive;
-  font-weight: lighter;
-  text-align: center;
-  color: var(--color-white);
-  background-color: var(--bg-color-main);
-  text-shadow: -1px -1px 0 var(--color-dark), 1px -1px 0 var(--color-dark),
-    -1px 1px 0 var(--color-dark), 1px 1px 0 var(--color-dark);
-}
 
 
-form {
-  text-align: center;
-  font-size: 18px;
-  margin-top: -10px;
-  margin-bottom: 6px;
-}
-form label {
-  padding-right: 3px;
-  text-decoration: 3px var(--clr-underline) underline;
-}
-.nameButton,
 .resetButton {
-  background-color: var(--bg-color);
+  background-color: transparent;
   font-family: "Luckiest Guy", cursive;
   font-weight: lighter;
-  color: var(--color-white);
+  color: $white-color;
   text-shadow: -1px -1px 0 var(--color-dark), 1px -1px 0 var(--color-dark),
     -1px 1px 0 var(--color-dark), 1px 1px 0 var(--color-dark);
 }
 .nameButton {
-  border-radius: 4px;
-  font-size: 1.2rem;
+  
   padding-top: 5px;
 }
 
-
-.nameButton:hover {
-  background-color: var(--color-white);
-  color: var(--bg-color);
-}
 
 .resetButton:hover {
   background-color: var(--clr-button-hover);
@@ -66,43 +37,6 @@ form label {
   color: var(--color-alert);
 }
 
-.imgGame, .imgPcGame {
-  visibility: hidden;
-  display: flex;
-  justify-content: center;
-}
 
-.imgGame img,
-.imgPcGame img {
-  position: absolute;
-}
-.buttons {
-  display: flex;
-  justify-content: space-around;
-  font-size: 20px;
-}
 
-.buttons button {
-  font-family: "Luckiest Guy", cursive;
-  font-size: 20px;
-  color: rgb(255, 255, 255);
-  text-decoration: none;
-  border: 3px solid rgb(255, 255, 255);
-  padding-top: 40px;
-  padding-bottom: 40px;
-  border-radius: 20%;
-  background-color: rgb(79, 140, 255);
-  width: 131px;
-}
 
-.buttons button:hover {
-  color: var(--clr-button);
-  text-decoration: none;
-  background-color: rgb(43, 70, 121);
-}
-.buttons button:active {
-  color: var(--clr-button);
-  text-decoration: none;
-  background-color: rgb(43, 70, 121);
-  transform: scale(1.1);
-}

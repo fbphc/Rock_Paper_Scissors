@@ -1,16 +1,52 @@
 .main-ropasc {
-    display: flex;
+  display: flex;
+  justify-content: center;
+  padding: 6rem;
+  color: $white-color;
+  background: $main-col;
+  font-family: "Luckiest Guy", cursive;
+  font-weight: lighter;
+  text-align: center;
+  text-shadow: -1px -1px 0 $dark-dark-col, 1px -1px 0 $dark-dark-col,
+    -1px 1px 0 $dark-dark-col, 1px 1px 0 $dark-dark-col;
+  border: 3px solid black;
+  margin: 10rem 0;
   .ropasc-container {
     width: min-content;
     .ropasc-grid {
       border: 3px solid black;
+      border-left: none;
+      border-right: none;
       background: $blue-col;
       h1 {
         grid-area: head;
+        font-size: 2.4rem;
       }
       .form {
         grid-area: form;
         align-self: center;
+        display: flex;
+        justify-content: space-around;
+        form label {
+          font-size: 1.2rem;
+          text-decoration: 3px var(--clr-underline) underline;
+        }
+        .nameButton {
+          background-color: $blue-col;
+          font-family: "Luckiest Guy", cursive;
+          border-radius: 4px;
+          font-size: 1.2rem;
+          font-weight: lighter;
+          color: $white-color;
+          padding: 0.3rem;
+          text-shadow: -1px -1px 0 var(--color-dark),
+            1px -1px 0 var(--color-dark), -1px 1px 0 var(--color-dark),
+            1px 1px 0 var(--color-dark);
+        }
+        .nameButton:hover {
+          background-color: $white-color;
+          color: $blue-col;
+        }
       }
       h1,
       #name,
@@ -43,6 +79,12 @@
         grid-area: f;
       }
       .imgGame,
+      .imgPcGame {
+        visibility: hidden;
+        display: flex;
+        justify-content: center;
+      }
+      .imgGame,
       #user-choice {
         grid-area: g;
       }
@@ -50,8 +92,14 @@
       #computer-choice {
         grid-area: i;
       }
+
+      .imgGame img,
+      .imgPcGame img {
+        position: absolute;
+      }
       #result {
         grid-area: h;
+        color: $white-color;
       }
       #user-choice,
       #computer-choice,
@@ -59,12 +107,31 @@
         font-size: 2rem;
         z-index: 10;
       }
-
-      .score {
-        grid-area: n;
+      #userScore,
+      .score,
+      #computerScore {
+        font-size: 2rem;
+      }
+      #userScore,
+      .score,
+      #computerScore {
+        border-bottom: 1px solid $dark-dark-col;
+        border-top: 1px solid $dark-dark-col;
+        border-radius: 1rem 1rem 1rem 1rem;
+        padding: 1.1rem 1.4rem 0.6rem;
+        color: $orange-clr;
+      }
+      .underline-score {
+        font-size: 2.4rem;
+        color: $white-color;
+        text-decoration: 3px underline $orange-clr;
       }
       #userScore {
         grid-area: m;
+      }
+      .score {
+        grid-area: n;
+        margin-top: 1rem;
       }
       #computerScore {
         grid-area: o;
@@ -72,6 +139,33 @@
 
       .buttons {
         grid-area: l;
+        display: flex;
+        justify-content: space-around;
+        button {
+          font-family: "Luckiest Guy", cursive;
+          font-size: 1.5rem;
+          color: $white-color;
+          text-decoration: none;
+          border: 3px solid $white-color;
+          padding-top: 2.4rem;
+          padding-bottom: 3.4rem;
+          border-radius: 22%;
+        background: $blue-col;
+        width: 8rem;
+        text-shadow: -1px -1px 0 $dark-dark-col, 1px -1px 0 $dark-dark-col,
+        -1px 1px 0 $dark-dark-col, 1px 1px 0 $dark-dark-col;
+        }
+        button:hover {
+            color: $col-button-hover;
+            text-decoration: none;
+            background-color: rgb(43, 70, 121);
+          }
+          button:active {
+            color: $col-button-hover;
+            text-decoration: none;
+            background-color: rgb(43, 70, 121);
+            transform: scale(1.1);
+          }
       }
       .star {
         grid-area: e;
@@ -85,14 +179,28 @@
       #vs {
         grid-area: e;
         align-self: center;
+        font-size: 3rem;
+        z-index: 10;
+        margin-top: 4rem;
       }
     }
   }
-  .left{
-      width: 100px;
-      height: 20%;
-      background: $blue-col;
-
+  .left,
+  .right {
+    width: 100px;
+    background: $blue-col;
+    border: 3px solid $dark-dark-col;
   }
-
+  .left {
+    border-radius: 4rem 0 0 4rem;
+    border-right: dashed $dark-dark-col;
+  }
+  .right {
+    border-radius: 0 4rem 4rem 0;
+    border-left: dashed $dark-dark-col;
+    button {
+      border: none;
+      font-size: 1rem;
+    }
+  }
 }

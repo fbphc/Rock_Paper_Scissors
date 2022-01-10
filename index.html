@@ -6,9 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GAME | STR</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css"> <!-- da cancellare -->
     <link rel="shortcut icon" href="./img/banana.ico" type="image/x-icon">
     <link rel="stylesheet" href="styleNew.css">
+    <script src="https://kit.fontawesome.com/4d658b918f.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -19,7 +20,8 @@
             <div class="left">asdasdas</div>
             <div class="ropasc-container">
                 <div class="ropasc-grid">
-                    <h1>Game: Rock, Paper, Scissors</h1>
+                    <h1>Game:<div>Rock, Paper, Scissors</div>
+                    </h1>
                     <div class="form">
                         <form id="form">
                             <label for="uName">ENTER YOUR NAME</label>
@@ -51,20 +53,26 @@
                     <div id="computer-choice"></div>
                     <h2 id="result">RESULT</h2>
 
-
-
                     <div id="oi" class="buttons">
                         <button class="test" id="Rock" onclick="generateComputerChoice()">ROCK</button>
                         <button class="test" id="Paper" onclick="generateComputerChoice()">PAPER</button>
                         <button class="test" id="Scissors" onclick="generateComputerChoice()">SCISSORS</button>
                     </div>
-                    <div id="userScore" class="score">0</div>
-                    <div class="score">SCORE</div>
-                    <div id="computerScore" class="score">0</div>
+                    <h2 id="userScore" class="score">0</h2>
+                    <h2 class="score underline-score">SCORE</h2>
+                    <h2 id="computerScore" class="score">0</h2>
                 </div>
             </div>
-            <div class=""><button type="button" class="reset resetButton" id="resetBtn">New game</button></div>
+            <div class="right">
+                <div class="reset">
+                    <button type="button" class="reset resetButton" id="resetBtn">New game</button>
+                </div>
+                <div class="toggle">
+                    <button type="button" class="reset resetButton" id="resetBtn"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
         </div>
+        
 
     </main>
     <footer>
