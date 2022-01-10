@@ -1,0 +1,145 @@
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.ropasc-grid {
+  display: -ms-grid;
+  display: grid;
+  grid-template: " head head head " 3rem " form form  form " 3rem " a b c " 3rem " d e f " 13rem " g h i " 7rem " l l l " 6rem " m n o " 6rem / 12rem 12rem 12rem;
+}
+
+.main-ropasc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main-ropasc .ropasc-container {
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+}
+
+.main-ropasc .ropasc-container .ropasc-grid {
+  border: 3px solid black;
+  background: cornflowerblue;
+}
+
+.main-ropasc .ropasc-container .ropasc-grid h1 {
+  grid-area: head;
+}
+
+.main-ropasc .ropasc-container .ropasc-grid .form {
+  grid-area: form;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.main-ropasc .ropasc-container .ropasc-grid h1,
+.main-ropasc .ropasc-container .ropasc-grid #name,
+.main-ropasc .ropasc-container .ropasc-grid .theMachine,
+.main-ropasc .ropasc-container .ropasc-grid .zombie,
+.main-ropasc .ropasc-container .ropasc-grid .machine,
+.main-ropasc .ropasc-container .ropasc-grid #user-choice,
+.main-ropasc .ropasc-container .ropasc-grid #result,
+.main-ropasc .ropasc-container .ropasc-grid .score,
+.main-ropasc .ropasc-container .ropasc-grid #computer-choice,
+.main-ropasc .ropasc-container .ropasc-grid #userScore,
+.main-ropasc .ropasc-container .ropasc-grid #computerScore {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.main-ropasc .ropasc-container .ropasc-grid #name {
+  grid-area: a;
+}
+
+.main-ropasc .ropasc-container .ropasc-grid .theMachine {
+  grid-area: c;
+}
+
+.main-ropasc .ropasc-container .ropasc-grid .zombie,
+.main-ropasc .ropasc-container .ropasc-grid .machine {
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.main-ropasc .ropasc-container .ropasc-grid .zombie {
+  grid-area: d;
+}
+
+.main-ropasc .ropasc-container .ropasc-grid .machine {
+  grid-area: f;
+}
+
+.main-ropasc .ropasc-container .ropasc-grid .imgGame,
+.main-ropasc .ropasc-container .ropasc-grid #user-choice {
+  grid-area: g;
+}
+
+.main-ropasc .ropasc-container .ropasc-grid .imgPcGame,
+.main-ropasc .ropasc-container .ropasc-grid #computer-choice {
+  grid-area: i;
+}
+
+.main-ropasc .ropasc-container .ropasc-grid #result {
+  grid-area: h;
+}
+
+.main-ropasc .ropasc-container .ropasc-grid #user-choice,
+.main-ropasc .ropasc-container .ropasc-grid #computer-choice,
+.main-ropasc .ropasc-container .ropasc-grid #result {
+  font-size: 2rem;
+  z-index: 10;
+}
+
+.main-ropasc .ropasc-container .ropasc-grid .score {
+  grid-area: n;
+}
+
+.main-ropasc .ropasc-container .ropasc-grid #userScore {
+  grid-area: m;
+}
+
+.main-ropasc .ropasc-container .ropasc-grid #computerScore {
+  grid-area: o;
+}
+
+.main-ropasc .ropasc-container .ropasc-grid .buttons {
+  grid-area: l;
+}
+
+.main-ropasc .ropasc-container .ropasc-grid .star {
+  grid-area: e;
+  width: 130px;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.main-ropasc .ropasc-container .ropasc-grid .star img {
+  width: 100%;
+}
+
+.main-ropasc .ropasc-container .ropasc-grid #vs {
+  grid-area: e;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.main-ropasc .left {
+  width: 100px;
+  height: 20%;
+  background: cornflowerblue;
+}
+/*# sourceMappingURL=styleNew.css.map */

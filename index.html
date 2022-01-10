@@ -8,72 +8,66 @@
     <title>GAME | STR</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="shortcut icon" href="./img/banana.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styleNew.css">
 </head>
 
 <body>
     <header>
     </header>
     <main>
-        <div class="game">
-            <h1>Game: Rock, Paper, Scissors</h1>
-            <div class="form">
-                <form id="form">
-                    <label for="uName">ENTER YOUR NAME</label>
-                    <input type="text" placeholder="Max 10 characters" maxlength="10" id="input">
-                    <button type="button" class="nameButton" onclick="getInputValue();" id="myBtn">GO!</button>
-                </form>
-            </div>
-
-            <div class="container">
-                <div class="player">
+        <div class="main-ropasc">
+            <div class="left">asdasdas</div>
+            <div class="ropasc-container">
+                <div class="ropasc-grid">
+                    <h1>Game: Rock, Paper, Scissors</h1>
+                    <div class="form">
+                        <form id="form">
+                            <label for="uName">ENTER YOUR NAME</label>
+                            <input type="text" placeholder="Max 10 characters" maxlength="10" id="input">
+                            <button type="button" class="nameButton" onclick="getInputValue();" id="myBtn">GO!</button>
+                        </form>
+                    </div>
                     <h2 id="name">THE HUMAN</h2>
-                    <img src="./img/0zombie.png" alt="player">
+                    <h2 class="theMachine">THE MACHINE</h2>
+                    <img src="./img/0zombie.png" alt="player" class="zombie">
                     <div class="imgGame">
                         <img id="imgRock" src="./img/0rock.png" alt="">
                         <img id="imgPaper" src="./img/0paper.png" alt="">
                         <img id="imgScissors" src="./img/0scissors.png" alt="">
                     </div>
-                    <h2>
-                        <div id="user-choice"></div>
-                    </h2>
-                </div>
 
-                <div class="vs">
-                    <p id="vs"></p>
-                    <img src="./img/shapes-g4abf343e3_640.png" alt="">
-                </div>
-                <div class="computer">
-                    <h2>THE MACHINE</h2>
-                    <img src="./img/0droid.png" alt="the machine">
+                    <img src="./img/0droid.png" alt="the machine" class="machine">
+
                     <div class="imgPcGame">
                         <img id="imgPcRock" src="./img/0rock.png" alt="">
                         <img id="imgPcPaper" src="./img/0paper.png" alt="">
                         <img id="imgPcScissors" src="./img/0scissors.png" alt="">
                     </div>
-                    <h2>
-                        <div id="computer-choice"></div>
-                    </h2>
+                    <div id="vs"></div>
+                    <div class="star">
+                        <img src="./img/shapes-g4abf343e3_640.png" alt="star">
+                    </div>
+                    <div id="user-choice"></div>
+                    <div id="computer-choice"></div>
+                    <h2 id="result">RESULT</h2>
+
+
+
+                    <div id="oi" class="buttons">
+                        <button class="test" id="Rock" onclick="generateComputerChoice()">ROCK</button>
+                        <button class="test" id="Paper" onclick="generateComputerChoice()">PAPER</button>
+                        <button class="test" id="Scissors" onclick="generateComputerChoice()">SCISSORS</button>
+                    </div>
+                    <div id="userScore" class="score">0</div>
+                    <div class="score">SCORE</div>
+                    <div id="computerScore" class="score">0</div>
                 </div>
             </div>
-
-            <div class="result">
-                <h2 id="result">RESULT</h2>
-            </div>
-            <div class="scoreboard">
-                <div id="userScore" class="score">0</div>
-                <div>SCORE</div>
-                <div id="computerScore" class="score">0</div>
-            </div>
-            <div id="oi" class="buttons">
-                <button class="test" id="Rock" onclick="generateComputerChoice()">ROCK</button>
-                <button class="test" id="Paper" onclick="generateComputerChoice()">PAPER</button>
-                <button class="test" id="Scissors" onclick="generateComputerChoice()">SCISSORS</button>
-            </div>
-            
+            <div class=""><button type="button" class="reset resetButton" id="resetBtn">New game</button></div>
         </div>
+
     </main>
     <footer>
-        <button type="button" class="reset resetButton" id="resetBtn">New game</button>
     </footer>
     <script src="app.js" charset="utf-8"></script>
 </body>

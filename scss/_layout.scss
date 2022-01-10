@@ -1,0 +1,98 @@
+.main-ropasc {
+    display: flex;
+  .ropasc-container {
+    width: min-content;
+    .ropasc-grid {
+      border: 3px solid black;
+      background: $blue-col;
+      h1 {
+        grid-area: head;
+      }
+      .form {
+        grid-area: form;
+        align-self: center;
+      }
+      h1,
+      #name,
+      .theMachine,
+      .zombie,
+      .machine,
+      #user-choice,
+      #result,
+      .score,
+      #computer-choice,
+      #userScore,
+      #computerScore {
+        align-self: center;
+        justify-self: center;
+      }
+      #name {
+        grid-area: a;
+      }
+      .theMachine {
+        grid-area: c;
+      }
+      .zombie,
+      .machine {
+        justify-self: center;
+      }
+      .zombie {
+        grid-area: d;
+      }
+      .machine {
+        grid-area: f;
+      }
+      .imgGame,
+      #user-choice {
+        grid-area: g;
+      }
+      .imgPcGame,
+      #computer-choice {
+        grid-area: i;
+      }
+      #result {
+        grid-area: h;
+      }
+      #user-choice,
+      #computer-choice,
+      #result {
+        font-size: 2rem;
+        z-index: 10;
+      }
+
+      .score {
+        grid-area: n;
+      }
+      #userScore {
+        grid-area: m;
+      }
+      #computerScore {
+        grid-area: o;
+      }
+
+      .buttons {
+        grid-area: l;
+      }
+      .star {
+        grid-area: e;
+        width: 130px;
+        align-self: end;
+        justify-self: center;
+        img {
+          width: 100%;
+        }
+      }
+      #vs {
+        grid-area: e;
+        align-self: center;
+      }
+    }
+  }
+  .left{
+      width: 100px;
+      height: 20%;
+      background: $blue-col;
+
+  }
+
+}
