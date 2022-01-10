@@ -1,3 +1,11 @@
+/* TEMPORANEO
+function playerChoice (){}
+
+
+ document.getElementById("userScore").innerHTML = incrementUserScore;
+    document.getElementById("computerScore").innerHTML = incrementComputerScore;
+*/
+
 function getInputValue() {
   let namePlayer = document.getElementById("input").value;
   let field = input.value;
@@ -8,8 +16,22 @@ function getInputValue() {
   } else {
     document.getElementById("name").innerHTML = namePlayer;
   }
+  localStorage.setItem("user", namePlayer || "???");
   document.getElementById("form").reset();
 }
+
+window.onload = function(){
+  if(localStorage.getItem("user")){
+    document.getElementById("name").innerHTML = localStorage.getItem("user");
+  }
+  if(localStorage.getItem("userScore")){
+    document.getElementById("userScore").innerHTML = localStorage.getItem("userScore");
+  }
+  if(localStorage.getItem("computerScore")){
+    document.getElementById("computerScore").innerHTML = localStorage.getItem("computerScore");
+  }
+}
+
 
 form.addEventListener("submit", function (event) {
   event.preventDefault();
@@ -20,33 +42,35 @@ form.addEventListener("submit", function (event) {
 const computerChoiceDisplay = document.getElementById("computer-choice");
 const userChoiceDisplay = document.getElementById("user-choice");
 const possibleChoices = document.querySelectorAll("div.buttons > button");
+const userSelections = document.querySelectorAll(".imgGame img");
+const computerSelections = document.querySelectorAll(".imgPcGame img");
+const choices = ["Rock", "Paper", "Scissors"];
 let userChoice;
 let computerChoice;
+const resetButton = document.getElementById("resetBtn");
+
+resetButton.onclick = function(){
+  localStorage.clear();
+  location.reload();
+}
+
+function resetChoices(imgArray, display) {
+  /* INI. COND. STEP */
+  for (let i = 0; i < imgArray.length; i++) {
+    imgArray[i].style.visibility = "hidden";
+  }
+  display.innerHTML = "";
+}
 
 possibleChoices.forEach((possibleChoice) =>
   possibleChoice.addEventListener("click", (e) => {
     userChoice = e.target.id;
-
+    disable(possibleChoices);
     setTimeout(() => {
-      if (possibleChoice === document.getElementById("Rock")) {
-        document.getElementById("imgRock").style.visibility = "visible";
-        document.getElementById("imgPaper").style.visibility = "hidden";
-        document.getElementById("imgScissors").style.visibility = "hidden";
-      }
-
-      if (possibleChoice === document.getElementById("Paper")) {
-        document.getElementById("imgRock").style.visibility = "hidden";
-        document.getElementById("imgPaper").style.visibility = "visible";
-        document.getElementById("imgScissors").style.visibility = "hidden";
-      }
-
-      if (possibleChoice === document.getElementById("Scissors")) {
-        document.getElementById("imgRock").style.visibility = "hidden";
-        document.getElementById("imgPaper").style.visibility = "hidden";
-        document.getElementById("imgScissors").style.visibility = "visible";
-      }
-
+      resetChoices(userSelections, userChoiceDisplay);
+      userSelections[choices.indexOf(e.target.id)].style.visibility = "visible";
       userChoiceDisplay.innerHTML = userChoice;
+      enable(possibleChoices);
     }, 750);
 
     /* function startCountdown() { */
@@ -66,38 +90,12 @@ possibleChoices.forEach((possibleChoice) =>
   })
 );
 
-const rockOutFunction = "Rock";
-const paperOutFunction = "Paper";
-const scissorsOutFunction = "Scissors";
-
 function generateComputerChoice() {
-  const randomNumber = Math.floor(Math.random() * 3) + 1;
-  if (randomNumber === 1) {
-    computerChoice = rockOutFunction;
-    setTimeout(() => {
-      document.getElementById("imgPcRock").style.visibility = "visible";
-      document.getElementById("imgPcPaper").style.visibility = "hidden";
-      document.getElementById("imgPcScissors").style.visibility = "hidden";
-    }, 750);
-  }
-  if (randomNumber === 2) {
-    computerChoice = paperOutFunction;
-    setTimeout(() => {
-      document.getElementById("imgPcRock").style.visibility = "hidden";
-      document.getElementById("imgPcPaper").style.visibility = "visible";
-      document.getElementById("imgPcScissors").style.visibility = "hidden";
-    }, 750);
-  }
-  if (randomNumber === 3) {
-    computerChoice = scissorsOutFunction;
-    setTimeout(() => {
-      document.getElementById("imgPcRock").style.visibility = "hidden";
-      document.getElementById("imgPcPaper").style.visibility = "hidden";
-      document.getElementById("imgPcScissors").style.visibility = "visible";
-    }, 750);
-  }
-
+  const randomNumber = Math.floor(Math.random() * 3);
+  computerChoice = choices[randomNumber];
+  resetChoices(computerSelections, computerChoiceDisplay);
   setTimeout(() => {
+    computerSelections[randomNumber].style.visibility = "visible";
     computerChoiceDisplay.innerHTML = computerChoice;
   }, 750);
 }
@@ -139,44 +137,27 @@ let incrementComputerScore = 0;
 function scoreUser() {
   if (result === "you win!") {
     incrementUserScore++;
+    localStorage.setItem("userScore", incrementUserScore);
   } else if (result === "you lose!") {
     incrementComputerScore++;
-  } else {
-    console.log("suka");
-  }
+    localStorage.setItem("computerScore", incrementComputerScore);
+  } 
   setTimeout(() => {
     document.getElementById("userScore").innerHTML = incrementUserScore;
     document.getElementById("computerScore").innerHTML = incrementComputerScore;
-    console.log(
-      "incrementUserScore",
-      incrementUserScore,
-      incrementComputerScore
-    );
   }, 750);
 }
 
 // DISABLE BUTTONS //
 
-function submitPoll1() {
-  document.getElementById("Rock").disabled = true;
-  setTimeout(function () {
-    document.getElementById("Rock").disabled = false;
-  }, 1000);
+function enable(buttons) {
+  for (let i = 0; i < buttons.length; i++) {
+    buttons[i].disabled = false;
+  }
 }
-document.getElementById("Rock").addEventListener("click", submitPoll1);
 
-function submitPoll2() {
-  document.getElementById("Paper").disabled = true;
-  setTimeout(function () {
-    document.getElementById("Paper").disabled = false;
-  }, 1000);
+function disable(buttons) {
+  for (let i = 0; i < buttons.length; i++) {
+    buttons[i].disabled = true;
+  }
 }
-document.getElementById("Paper").addEventListener("click", submitPoll2);
-
-function submitPoll3() {
-  document.getElementById("Scissors").disabled = true;
-  setTimeout(function () {
-    document.getElementById("Scissors").disabled = false;
-  }, 1000);
-}
-document.getElementById("Scissors").addEventListener("click", submitPoll3);

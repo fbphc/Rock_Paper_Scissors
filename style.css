@@ -1,5 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
 
+:root {
+  --bg-color: #6495ed;
+  --color-dark: #333;
+  --color-white: #fff;
+  --color-alert: rgb(255, 81, 0);
+  --clr-button: #fffbbe;
+}
 * {
   box-sizing: border-box;
 }
@@ -7,58 +14,93 @@ body {
   font-family: "Luckiest Guy", cursive;
   font-weight: lighter;
   text-align: center;
-  color: rgb(255, 255, 255);
+  color: var(--color-white);
   background-color: rgba(255, 121, 121, 0.3);
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
-    1px 1px 0 #000;
+  text-shadow: -1px -1px 0 var(--color-dark), 1px -1px 0 var(--color-dark), -1px 1px 0 var(--color-dark),
+    1px 1px 0 var(--color-dark);
 }
 
 .game {
-  background: cornflowerblue;
+  background: var(--bg-color);
   margin: auto;
   width: 490px;
-  border: 3px solid black;
+  border: 3px solid var(--color-dark);
   border-radius: 40px;
   padding: 10px;
 }
-
 form {
   text-align: center;
   font-size: 18px;
   margin-top: -10px;
   margin-bottom: 6px;
 }
-
 form label {
   padding-right: 3px;
   text-decoration: 3px rgb(255, 172, 38) underline;
 }
+input {
+  outline: none;
+  margin: 0 1rem ;
+}
 input[placeholder] {
   width: 120px;
-  background-color: rgb(201, 253, 246);
-}
-
-.nameButton {
+  padding: 0.3rem 0.2rem 0.4rem 0.2rem;
+  border: none;
   background-color: transparent;
-  border-radius: 4px;
+  border-left: 2px solid var(--color-white);
+  border-right: 2px solid var(--color-white);
+  width: 10rem;
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.844);
+ 
+}
+.nameButton, .resetButton {
+  background-color: var(--bg-color);
   font-family: "Luckiest Guy", cursive;
   font-weight: lighter;
-  font-size: 18px;
-  color: rgb(255, 255, 255);
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 
-    1px 1px 0 #000; /* da controllare forse box shadow e inutile not DRY */
+  color: var(--color-white);
+  text-shadow: -1px -1px 0 var(--color-dark), 1px -1px 0 var(--color-dark), -1px 1px 0 var(--color-dark), 
+    1px 1px 0 var(--color-dark);
+}
+.nameButton {
+  border-radius: 4px;
+  font-size: 1.2rem;
   padding-top: 5px;
 }
-
+.resetButton {
+  margin-top: 1rem;
+  border-radius: 1.5rem;
+  border: 1px solid var(--color-dark);
+  text-decoration: underline var(--color-white) 3px;
+  font-size: 1.5rem;
+  padding: 1.2rem 1rem;
+}
 .nameButton:hover {
-  background-color: white;
-  color: cornflowerblue;
+  background-color: var(--color-white);
+  color: var(--bg-color);
+}
+.reset {
+  transition: all 0.3s;
+}
+.reset:active {
+  transition: none;
+}
+.resetButton:hover {
+  border-radius: 2rem;
+  background-color: rgb(43, 70, 121);
+  color: #ffc86f;
+  text-decoration: underline #ffc86f 3px;
+}
+.resetButton:active {
+  transform: scale(1.1);
+  color: var(--color-alert);
+  text-decoration: underline var(--color-alert) 3px;
 }
 
 .nameButton:active {
-  color: cornflowerblue;
-  transform: scale(1.2);
+  color: var(--color-white);
 }
+
 
 .container {
   display: flex;
@@ -69,11 +111,7 @@ input[placeholder] {
 .computer {
   width: 300px;
 }
-.player img:first-of-type{
-  padding-bottom: 10px;
-  
-}
-.computer  img:first-of-type{
+.player img, .computer img {
   padding-bottom: 10px;
   
 }
@@ -108,7 +146,6 @@ h2:nth-of-type(2) {
 
 .result{
   margin-top: -60px;
-  /* color: #ffac26; */
   font-size: 20px;
 }
 
@@ -149,12 +186,12 @@ h2:nth-of-type(2) {
 }
 
 .buttons button:hover {
-  color: rgb(255, 251, 190);
+  color: var(--clr-button);
   text-decoration: none;
   background-color: rgb(43, 70, 121);
 }
 .buttons button:active {
-  color: rgb(255, 251, 190);
+  color: var(--clr-button);
   text-decoration: none;
   background-color: rgb(43, 70, 121);
   transform: scale(1.1);
@@ -164,7 +201,7 @@ h2:nth-of-type(2) {
   display: inline;
   justify-content: space-around;
   font-size: 20px;
-  background: cornflowerblue;
+  background: var(--bg-color);
   padding: 5px;
   font-size: 30px;
   color: #ffac26;
