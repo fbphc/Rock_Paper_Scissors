@@ -18,6 +18,7 @@
       border-left: none;
       border-right: none;
       background: $blue-col;
+      box-shadow:15px 150px 66px -123px rgba(0,0,0,0.4) inset, 15px -150px 66px -123px rgba(0,0,0,0.4) inset;
       h1 {
         grid-area: head;
         font-size: 2.4rem;
@@ -154,6 +155,8 @@
         width: 8rem;
         text-shadow: -1px -1px 0 $dark-dark-col, 1px -1px 0 $dark-dark-col,
         -1px 1px 0 $dark-dark-col, 1px 1px 0 $dark-dark-col;
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+        transition: all 0.1s;
         }
         button:hover {
             color: $col-button-hover;
@@ -190,17 +193,32 @@
     width: 100px;
     background: $blue-col;
     border: 3px solid $dark-dark-col;
+    box-shadow:15px 150px 66px -123px rgba(0,0,0,0.4) inset, 15px -150px 66px -123px rgba(0,0,0,0.4) inset;
   }
   .left {
     border-radius: 4rem 0 0 4rem;
-    border-right: dashed $dark-dark-col;
+    border-right: 2px dashed $white-color;
   }
   .right {
     border-radius: 0 4rem 4rem 0;
-    border-left: dashed $dark-dark-col;
-    button {
+    border-left: 2px dashed $white-color;
+    .resetButton {
       border: none;
       font-size: 1rem;
+      background-color: transparent;
+  font-family: "Luckiest Guy", cursive;
+  font-weight: lighter;
+  color: $white-color;
+  text-shadow: -1px -1px 0 $dark-dark-col, 1px -1px 0 $dark-dark-col,
+    -1px 1px 0 $dark-dark-col, 1px 1px 0 $dark-dark-col;
+    transition: all 0.1s;
     }
+    .resetButton:hover {
+        color: $orange-clr;
+      }
+      .resetButton:active {
+        color: $red_alert;
+        transform: scale(1.1);
+      }
   }
 }

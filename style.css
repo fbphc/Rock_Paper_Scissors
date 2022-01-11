@@ -1,42 +1,305 @@
-
-
-:root {
-  --bg-color: #6495ed;
-  --bg-color-light: rgba(211, 226, 255, 0.804);
-  --color-dark: #333;
-  --color-white: #fff;
-  --color-alert: rgb(255, 81, 0);
-  /* --clr-button: #fffbbe; */
-  --clr-button-hover: rgb(43, 70, 121);
-  --clr-underline: rgb(255, 172, 38);
-  --bg-color-main: rgba(255, 121, 121, 0.3);
-
+@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
+.ropasc-grid {
+  display: -ms-grid;
+  display: grid;
+  grid-template: " head head head " 7rem " form form  form " 3rem " a b c " 3rem " d e f " 13rem " g h i " 7rem " l l l " 6rem " m n o " 6.5rem / 10rem 10rem 10rem;
+}
 
-.resetButton {
+.main-ropasc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 6rem;
+  color: #ededed;
+  background: rgba(255, 121, 121, 0.3);
+  font-family: "Luckiest Guy", cursive;
+  font-weight: lighter;
+  text-align: center;
+  text-shadow: -1px -1px 0 #333333, 1px -1px 0 #333333, -1px 1px 0 #333333, 1px 1px 0 #333333;
+  border: 3px solid black;
+  margin: 10rem 0;
+}
+
+.main-ropasc .ropasc-container {
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+}
+
+.main-ropasc .ropasc-container .ropasc-grid {
+  border: 3px solid black;
+  border-left: none;
+  border-right: none;
+  background: cornflowerblue;
+  -webkit-box-shadow: 15px 150px 66px -123px rgba(0, 0, 0, 0.4) inset, 15px -150px 66px -123px rgba(0, 0, 0, 0.4) inset;
+          box-shadow: 15px 150px 66px -123px rgba(0, 0, 0, 0.4) inset, 15px -150px 66px -123px rgba(0, 0, 0, 0.4) inset;
+}
+
+.main-ropasc .ropasc-container .ropasc-grid h1 {
+  grid-area: head;
+  font-size: 2.4rem;
+}
+
+.main-ropasc .ropasc-container .ropasc-grid .form {
+  grid-area: form;
+  -ms-flex-item-align: center;
+      align-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.main-ropasc .ropasc-container .ropasc-grid .form form label {
+  font-size: 1.2rem;
+  -webkit-text-decoration: 3px var(--clr-underline) underline;
+          text-decoration: 3px var(--clr-underline) underline;
+}
+
+.main-ropasc .ropasc-container .ropasc-grid .form .nameButton {
+  background-color: cornflowerblue;
+  font-family: "Luckiest Guy", cursive;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  font-weight: lighter;
+  color: #ededed;
+  padding: 0.3rem;
+  text-shadow: -1px -1px 0 var(--color-dark), 1px -1px 0 var(--color-dark), -1px 1px 0 var(--color-dark), 1px 1px 0 var(--color-dark);
+}
+
+.main-ropasc .ropasc-container .ropasc-grid .form .nameButton:hover {
+  background-color: #ededed;
+  color: cornflowerblue;
+}
+
+.main-ropasc .ropasc-container .ropasc-grid h1,
+.main-ropasc .ropasc-container .ropasc-grid #name,
+.main-ropasc .ropasc-container .ropasc-grid .theMachine,
+.main-ropasc .ropasc-container .ropasc-grid .zombie,
+.main-ropasc .ropasc-container .ropasc-grid .machine,
+.main-ropasc .ropasc-container .ropasc-grid #user-choice,
+.main-ropasc .ropasc-container .ropasc-grid #result,
+.main-ropasc .ropasc-container .ropasc-grid .score,
+.main-ropasc .ropasc-container .ropasc-grid #computer-choice,
+.main-ropasc .ropasc-container .ropasc-grid #userScore,
+.main-ropasc .ropasc-container .ropasc-grid #computerScore {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.main-ropasc .ropasc-container .ropasc-grid #name {
+  grid-area: a;
+}
+
+.main-ropasc .ropasc-container .ropasc-grid .theMachine {
+  grid-area: c;
+}
+
+.main-ropasc .ropasc-container .ropasc-grid .zombie,
+.main-ropasc .ropasc-container .ropasc-grid .machine {
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.main-ropasc .ropasc-container .ropasc-grid .zombie {
+  grid-area: d;
+}
+
+.main-ropasc .ropasc-container .ropasc-grid .machine {
+  grid-area: f;
+}
+
+.main-ropasc .ropasc-container .ropasc-grid .imgGame,
+.main-ropasc .ropasc-container .ropasc-grid .imgPcGame {
+  visibility: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main-ropasc .ropasc-container .ropasc-grid .imgGame,
+.main-ropasc .ropasc-container .ropasc-grid #user-choice {
+  grid-area: g;
+}
+
+.main-ropasc .ropasc-container .ropasc-grid .imgPcGame,
+.main-ropasc .ropasc-container .ropasc-grid #computer-choice {
+  grid-area: i;
+}
+
+.main-ropasc .ropasc-container .ropasc-grid .imgGame img,
+.main-ropasc .ropasc-container .ropasc-grid .imgPcGame img {
+  position: absolute;
+}
+
+.main-ropasc .ropasc-container .ropasc-grid #result {
+  grid-area: h;
+  color: #ededed;
+}
+
+.main-ropasc .ropasc-container .ropasc-grid #user-choice,
+.main-ropasc .ropasc-container .ropasc-grid #computer-choice,
+.main-ropasc .ropasc-container .ropasc-grid #result {
+  font-size: 2rem;
+  z-index: 10;
+}
+
+.main-ropasc .ropasc-container .ropasc-grid #userScore,
+.main-ropasc .ropasc-container .ropasc-grid .score,
+.main-ropasc .ropasc-container .ropasc-grid #computerScore {
+  font-size: 2rem;
+}
+
+.main-ropasc .ropasc-container .ropasc-grid #userScore,
+.main-ropasc .ropasc-container .ropasc-grid .score,
+.main-ropasc .ropasc-container .ropasc-grid #computerScore {
+  border-bottom: 1px solid #333333;
+  border-top: 1px solid #333333;
+  border-radius: 1rem 1rem 1rem 1rem;
+  padding: 1.1rem 1.4rem 0.6rem;
+  color: #ffac26;
+}
+
+.main-ropasc .ropasc-container .ropasc-grid .underline-score {
+  font-size: 2.4rem;
+  color: #ededed;
+  -webkit-text-decoration: 3px underline #ffac26;
+          text-decoration: 3px underline #ffac26;
+}
+
+.main-ropasc .ropasc-container .ropasc-grid #userScore {
+  grid-area: m;
+}
+
+.main-ropasc .ropasc-container .ropasc-grid .score {
+  grid-area: n;
+  margin-top: 1rem;
+}
+
+.main-ropasc .ropasc-container .ropasc-grid #computerScore {
+  grid-area: o;
+}
+
+.main-ropasc .ropasc-container .ropasc-grid .buttons {
+  grid-area: l;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.main-ropasc .ropasc-container .ropasc-grid .buttons button {
+  font-family: "Luckiest Guy", cursive;
+  font-size: 1.5rem;
+  color: #ededed;
+  text-decoration: none;
+  border: 3px solid #ededed;
+  padding-top: 2.4rem;
+  padding-bottom: 3.4rem;
+  border-radius: 22%;
+  background: cornflowerblue;
+  width: 8rem;
+  text-shadow: -1px -1px 0 #333333, 1px -1px 0 #333333, -1px 1px 0 #333333, 1px 1px 0 #333333;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+          box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+}
+
+.main-ropasc .ropasc-container .ropasc-grid .buttons button:hover {
+  color: #fffbbe;
+  text-decoration: none;
+  background-color: #2b4679;
+}
+
+.main-ropasc .ropasc-container .ropasc-grid .buttons button:active {
+  color: #fffbbe;
+  text-decoration: none;
+  background-color: #2b4679;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.main-ropasc .ropasc-container .ropasc-grid .star {
+  grid-area: e;
+  width: 130px;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.main-ropasc .ropasc-container .ropasc-grid .star img {
+  width: 100%;
+}
+
+.main-ropasc .ropasc-container .ropasc-grid #vs {
+  grid-area: e;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-size: 3rem;
+  z-index: 10;
+  margin-top: 4rem;
+}
+
+.main-ropasc .left,
+.main-ropasc .right {
+  width: 100px;
+  background: cornflowerblue;
+  border: 3px solid #333333;
+  -webkit-box-shadow: 15px 150px 66px -123px rgba(0, 0, 0, 0.4) inset, 15px -150px 66px -123px rgba(0, 0, 0, 0.4) inset;
+          box-shadow: 15px 150px 66px -123px rgba(0, 0, 0, 0.4) inset, 15px -150px 66px -123px rgba(0, 0, 0, 0.4) inset;
+}
+
+.main-ropasc .left {
+  border-radius: 4rem 0 0 4rem;
+  border-right: 2px dashed #ededed;
+}
+
+.main-ropasc .right {
+  border-radius: 0 4rem 4rem 0;
+  border-left: 2px dashed #ededed;
+}
+
+.main-ropasc .right .resetButton {
+  border: none;
+  font-size: 1rem;
   background-color: transparent;
   font-family: "Luckiest Guy", cursive;
   font-weight: lighter;
-  color: $white-color;
-  text-shadow: -1px -1px 0 var(--color-dark), 1px -1px 0 var(--color-dark),
-    -1px 1px 0 var(--color-dark), 1px 1px 0 var(--color-dark);
-}
-.nameButton {
-  
-  padding-top: 5px;
+  color: #ededed;
+  text-shadow: -1px -1px 0 #333333, 1px -1px 0 #333333, -1px 1px 0 #333333, 1px 1px 0 #333333;
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
 }
 
-
-.resetButton:hover {
-  background-color: var(--clr-button-hover);
-  color: var(--clr-underline);
+.main-ropasc .right .resetButton:hover {
+  color: #ffac26;
 }
 
-.resetButton:active {
-  color: var(--color-alert);
+.main-ropasc .right .resetButton:active {
+  color: #ff5100;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
-
-
-
-
+/*# sourceMappingURL=style.css.map */
