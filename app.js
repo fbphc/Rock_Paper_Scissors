@@ -161,3 +161,4 @@ function disable(buttons) {
     buttons[i].disabled = true;
   }
 }
+

@@ -12,6 +12,10 @@
   grid-template: " head head head " 7rem " form form  form " 3rem " a b c " 3rem " d e f " 13rem " g h i " 7rem " l l l " 6rem " m n o " 6.5rem / 10rem 10rem 10rem;
 }
 
+body {
+  background: rgba(255, 121, 121, 0.3);
+}
+
 .main-ropasc {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -21,12 +25,10 @@
           justify-content: center;
   padding: 2rem;
   color: #ededed;
-  background: rgba(255, 121, 121, 0.3);
   font-family: "Luckiest Guy", cursive;
   font-weight: lighter;
   text-align: center;
   text-shadow: -1px -1px 0 #333333, 1px -1px 0 #333333, -1px 1px 0 #333333, 1px 1px 0 #333333;
-  border: 3px solid black;
 }
 
 .main-ropasc .ropasc-container {

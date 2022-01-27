@@ -1,15 +1,16 @@
+body {
+  background: $main-col;
+}
 .main-ropasc {
   display: flex;
   justify-content: center;
   padding: 2rem;
   color: $white-color;
-  background: $main-col;
   font-family: "Luckiest Guy", cursive;
   font-weight: lighter;
   text-align: center;
   text-shadow: -1px -1px 0 $dark-dark-col, 1px -1px 0 $dark-dark-col,
     -1px 1px 0 $dark-dark-col, 1px 1px 0 $dark-dark-col;
-  border: 3px solid black;
   .ropasc-container {
     width: min-content;
     .ropasc-grid {
