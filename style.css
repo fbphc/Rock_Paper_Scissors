@@ -19,7 +19,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 6rem;
+  padding: 2rem;
   color: #ededed;
   background: rgba(255, 121, 121, 0.3);
   font-family: "Luckiest Guy", cursive;
@@ -27,7 +27,6 @@
   text-align: center;
   text-shadow: -1px -1px 0 #333333, 1px -1px 0 #333333, -1px 1px 0 #333333, 1px 1px 0 #333333;
   border: 3px solid black;
-  margin: 10rem 0;
 }
 
 .main-ropasc .ropasc-container {
