@@ -76,7 +76,8 @@ body {
 }
 
 .main-ropasc .ropasc-container .ropasc-grid .form input:focus {
-  background-color: #fffbbe;
+  -webkit-box-shadow: #fffbbe 0px 30px 60px -12px inset, #fffbbe 0px 18px 36px -18px inset;
+          box-shadow: #fffbbe 0px 30px 60px -12px inset, #fffbbe 0px 18px 36px -18px inset;
 }
 
 .main-ropasc .ropasc-container .ropasc-grid .form input[placeholder] {
@@ -90,13 +91,21 @@ body {
   font-size: 1.2rem;
   font-weight: lighter;
   color: #ededed;
-  padding: 0.3rem 0.5rem 0 0.5rem;
+  padding: 0.4rem 0.5rem 0 0.5rem;
+  border: 2px solid #ededed;
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
   text-shadow: -1px -1px 0 var(--color-dark), 1px -1px 0 var(--color-dark), -1px 1px 0 var(--color-dark), 1px 1px 0 var(--color-dark);
 }
 
 .main-ropasc .ropasc-container .ropasc-grid .form .nameButton:hover {
   background-color: #ededed;
   color: cornflowerblue;
+}
+
+.main-ropasc .ropasc-container .ropasc-grid .form .nameButton:active {
+  border: 2px solid #ffac26;
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .main-ropasc .ropasc-container .ropasc-grid h1,
