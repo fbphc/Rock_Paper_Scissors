@@ -64,8 +64,23 @@ body {
 
 .main-ropasc .ropasc-container .ropasc-grid .form form label {
   font-size: 1.2rem;
-  -webkit-text-decoration: 3px var(--clr-underline) underline;
-          text-decoration: 3px var(--clr-underline) underline;
+  -webkit-text-decoration: 3px #ffac26 underline;
+          text-decoration: 3px #ffac26 underline;
+}
+
+.main-ropasc .ropasc-container .ropasc-grid .form input {
+  margin: 0 0.4rem;
+  outline: none;
+  border: none;
+  text-transform: uppercase;
+}
+
+.main-ropasc .ropasc-container .ropasc-grid .form input:focus {
+  background-color: #fffbbe;
+}
+
+.main-ropasc .ropasc-container .ropasc-grid .form input[placeholder] {
+  padding: 0.2rem;
 }
 
 .main-ropasc .ropasc-container .ropasc-grid .form .nameButton {
@@ -75,7 +90,7 @@ body {
   font-size: 1.2rem;
   font-weight: lighter;
   color: #ededed;
-  padding: 0.3rem;
+  padding: 0.3rem 0.5rem 0 0.5rem;
   text-shadow: -1px -1px 0 var(--color-dark), 1px -1px 0 var(--color-dark), -1px 1px 0 var(--color-dark), 1px 1px 0 var(--color-dark);
 }
 

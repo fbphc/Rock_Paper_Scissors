@@ -30,7 +30,19 @@ body {
         justify-content: space-around;
         form label {
           font-size: 1.2rem;
-          text-decoration: 3px var(--clr-underline) underline;
+          text-decoration: 3px $orange-clr underline;
+        }
+        input {
+          margin: 0 0.4rem;
+          outline: none;
+          border: none;
+          text-transform: uppercase;
+        }
+        input:focus{
+         background-color: $col-button-hover;
+        }
+        input[placeholder]{
+          padding: 0.2rem;
         }
         .nameButton {
           background-color: $blue-col;
@@ -39,7 +51,7 @@ body {
           font-size: 1.2rem;
           font-weight: lighter;
           color: $white-color;
-          padding: 0.3rem;
+          padding: 0.3rem 0.5rem 0 0.5rem;
           text-shadow: -1px -1px 0 var(--color-dark),
             1px -1px 0 var(--color-dark), -1px 1px 0 var(--color-dark),
             1px 1px 0 var(--color-dark);

@@ -1,10 +1,3 @@
-/* TEMPORANEO
-function playerChoice (){}
-
-
- document.getElementById("userScore").innerHTML = incrementUserScore;
-    document.getElementById("computerScore").innerHTML = incrementComputerScore;
-*/
 
 function getInputValue() {
   let namePlayer = document.getElementById("input").value;
