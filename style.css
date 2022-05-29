@@ -307,23 +307,28 @@ body {
 }
 
 .main-ropasc .right .resetButton {
-  border: none;
-  font-size: 1rem;
+  font-size: 1.6rem;
   background-color: transparent;
   font-family: "Luckiest Guy", cursive;
   font-weight: lighter;
+  margin-top: 1.8rem;
+  border: none;
   color: #ededed;
   text-shadow: -1px -1px 0 #333333, 1px -1px 0 #333333, -1px 1px 0 #333333, 1px 1px 0 #333333;
   -webkit-transition: all 0.1s;
   transition: all 0.1s;
+  opacity: 0.6;
 }
 
 .main-ropasc .right .resetButton:hover {
-  color: #ffac26;
+  opacity: 1;
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
 }
 
 .main-ropasc .right .resetButton:active {
-  color: #ff5100;
+  /* color: $red_alert; */
+  color: #ffac26;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }

@@ -18,7 +18,8 @@ body {
       border-left: none;
       border-right: none;
       background: $blue-col;
-      box-shadow:15px 150px 66px -123px rgba(0,0,0,0.4) inset, 15px -150px 66px -123px rgba(0,0,0,0.4) inset;
+      box-shadow: 15px 150px 66px -123px rgba(0, 0, 0, 0.4) inset,
+        15px -150px 66px -123px rgba(0, 0, 0, 0.4) inset;
       h1 {
         grid-area: head;
         font-size: 2.4rem;
@@ -38,10 +39,11 @@ body {
           border: none;
           text-transform: uppercase;
         }
-        input:focus{
-         box-shadow: $col-button-hover 0px 30px 60px -12px inset, $col-button-hover 0px 18px 36px -18px inset;
+        input:focus {
+          box-shadow: $col-button-hover 0px 30px 60px -12px inset,
+            $col-button-hover 0px 18px 36px -18px inset;
         }
-        input[placeholder]{
+        input[placeholder] {
           padding: 0.2rem;
         }
         .nameButton {
@@ -169,24 +171,25 @@ body {
           padding-top: 2.4rem;
           padding-bottom: 3.4rem;
           border-radius: 22%;
-        background: $blue-col;
-        width: 8rem;
-        text-shadow: -1px -1px 0 $dark-dark-col, 1px -1px 0 $dark-dark-col,
-        -1px 1px 0 $dark-dark-col, 1px 1px 0 $dark-dark-col;
-        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-        transition: all 0.1s;
+          background: $blue-col;
+          width: 8rem;
+          text-shadow: -1px -1px 0 $dark-dark-col, 1px -1px 0 $dark-dark-col,
+            -1px 1px 0 $dark-dark-col, 1px 1px 0 $dark-dark-col;
+          box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+            rgba(0, 0, 0, 0.23) 0px 6px 6px;
+          transition: all 0.1s;
         }
         button:hover {
-            color: $col-button-hover;
-            text-decoration: none;
-            background-color: rgb(43, 70, 121);
-          }
-          button:active {
-            color: $col-button-hover;
-            text-decoration: none;
-            background-color: rgb(43, 70, 121);
-            transform: scale(1.1);
-          }
+          color: $col-button-hover;
+          text-decoration: none;
+          background-color: rgb(43, 70, 121);
+        }
+        button:active {
+          color: $col-button-hover;
+          text-decoration: none;
+          background-color: rgb(43, 70, 121);
+          transform: scale(1.1);
+        }
       }
       .star {
         grid-area: e;
@@ -211,7 +214,8 @@ body {
     width: 100px;
     background: $blue-col;
     border: 3px solid $dark-dark-col;
-    box-shadow:15px 150px 66px -123px rgba(0,0,0,0.4) inset, 15px -150px 66px -123px rgba(0,0,0,0.4) inset;
+    box-shadow: 15px 150px 66px -123px rgba(0, 0, 0, 0.4) inset,
+      15px -150px 66px -123px rgba(0, 0, 0, 0.4) inset;
   }
   .left {
     border-radius: 4rem 0 0 4rem;
@@ -221,22 +225,26 @@ body {
     border-radius: 0 4rem 4rem 0;
     border-left: 2px dashed $white-color;
     .resetButton {
-      border: none;
-      font-size: 1rem;
+      font-size: 1.6rem;
       background-color: transparent;
-  font-family: "Luckiest Guy", cursive;
-  font-weight: lighter;
-  color: $white-color;
-  text-shadow: -1px -1px 0 $dark-dark-col, 1px -1px 0 $dark-dark-col,
-    -1px 1px 0 $dark-dark-col, 1px 1px 0 $dark-dark-col;
-    transition: all 0.1s;
+      font-family: "Luckiest Guy", cursive;
+      font-weight: lighter;
+      margin-top: 1.8rem;
+      border: none;
+      color: $white-color;
+      text-shadow: -1px -1px 0 $dark-dark-col, 1px -1px 0 $dark-dark-col,
+        -1px 1px 0 $dark-dark-col, 1px 1px 0 $dark-dark-col;
+      transition: all 0.1s;
+      opacity: 0.6;
     }
     .resetButton:hover {
-        color: $orange-clr;
-      }
-      .resetButton:active {
-        color: $red_alert;
-        transform: scale(1.1);
-      }
+      opacity: 1;
+      transform: scale(0.95);
+    }
+    .resetButton:active {
+      /* color: $red_alert; */
+      color: $orange-clr;
+      transform: scale(1.1);
+    }
   }
 }
